@@ -20,6 +20,6 @@ m -rf mochawesome-report
 ```
 
 4、url参数化文件编写规则
-
+- 更改cypress/fixtures文件夹下的checkUrl.json文件
 - 每个URL校验页面均填写4个参数：visitUrl、expectUrl、htmlTitle、htmlText
 - 参数htmlTitle、htmlText 为可选，填写 "" 默认不校验
