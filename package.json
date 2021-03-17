@@ -1,0 +1,22 @@
+{
+  "name": "midea-check-url",
+  "version": "1.0.0",
+  "description": "校验url",
+  "main": "index.js",
+  "scripts": {
+    "chrome-test": "./node_modules/cypress/bin/cypress run --browser chrome --headless --spec **/*.spec.js --reporter mochawesome --reporter-options reportDir=\"mochawesome-report\",overwrite=false,html=true,json=false",
+    "firefox-test": "./node_modules/cypress/bin/cypress run --browser firefox --headless --spec **/*.spec.js --reporter mochawesome --reporter-options reportDir=\"mochawesome-report\",overwrite=false,html=true,json=false",
+    "report:merge": "./node_modules/mochawesome-merge/bin/mochawesome-merge.js mochawesome-report/*.json > mochawesome-report/reports.json",
+    "report:generate": "./node_modules/mochawesome-report-generator/bin/cli.js -i mochawesome-report/reports.json",
+    "report:delete": "rm -rf mochawesome-report"
+  },
+  "author": "DC_ing",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.7.1",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}
